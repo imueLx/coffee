@@ -7,7 +7,7 @@ module.exports = {
     return [
       {
         // matching all API routes
-        source: "https://coffee-plum.vercel.app/api/login",
+        source: "/api/login",
         headers: [
           { key: "Access-Control-Allow-Credentials", value: "true" },
           { key: "Access-Control-Allow-Origin", value: "*" },
