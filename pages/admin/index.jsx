@@ -12,7 +12,7 @@ const Index = ({orders, products}) => {
     const handleDelete = async (id)=>{
         try {
             const res  = await  axios.delete(
-                "http://localhost:3000/api/products/"+ id
+                "http://coffee-plum.vercel.app/api/products/"+ id
                 );
             setCoffeeList(coffeeList.filter((coffee)=>coffee._id !== id))
         } catch (err) {
@@ -26,7 +26,7 @@ const Index = ({orders, products}) => {
         const currentStatus = item.status
 
         try {
-            const res = await axios.put("http://localhost:3000/api/orders/" + id, {
+            const res = await axios.put("http://coffee-plum.vercel.app/api/orders/" + id, {
               status: currentStatus + 1,
             });
             setOrderList([
@@ -131,8 +131,8 @@ export const getServerSideProps = async (ctx) =>{
         };
          
     }
-    const productRes = await axios.get("http://localhost:3000/api/products")
-    const orderRes = await axios.get("http://localhost:3000/api/orders")
+    const productRes = await axios.get("http://coffee-plum.vercel.app/api/products")
+    const orderRes = await axios.get("http://coffee-plum.vercel.app/api/orders")
 
     return{
         props:{
