@@ -31,7 +31,7 @@ export default function Contact () {
                             <textarea className={styles.textarea}>Message</textarea>
                         </div>
                     </div>
-                    <div className={styles.submit-btn}>
+                    <div className={styles.btn}>
                         Send Message
                     </div>
             </div>
