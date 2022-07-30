@@ -1,6 +1,9 @@
 .container{
     background-color: #444442;
     padding-top: 85px;
+    height: calc(100vh - 100px);
+    overflow: hidden;
+    position: relative;
 }
 
 .h1 {

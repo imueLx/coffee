@@ -8,12 +8,10 @@ export default function Contact () {
                     <h4>We love to hear from you!</h4>
             </div>
             <div className={styles.wrapper}>
-                    <div className="col-xs-12">
                         <div className={styles.styled}>
                             <input type="text" required />
                             <label>Name</label> 
                         </div>
-                    </div>
                     <div className={styles.input}>
                         <div className={styles.styled}>
                             <input type="text" required />
@@ -21,16 +19,12 @@ export default function Contact () {
                         </div>
                     </div>
                     <div className={styles.input}>
-                        <div className={styles.styled}>
                             <input type="text" required />
                             <label>Phone Number</label> 
-                        </div>
                     </div>
-                    <div className="col-xs-12">
                         <div className={styles.styled}>
                             <textarea className={styles.textarea}>Message</textarea>
                         </div>
-                    </div>
                     <div className={styles.btn}>
                         Send Message
                     </div>
