@@ -6,7 +6,7 @@ import Link from 'next/link'
 const CoffeeCard = ({coffee}) => {
   return (
     <div className={styles.container}>
-      <Link href={`/product/₱{coffee._id}`} passHref>
+      <Link href={`/product/${coffee._id}`} passHref>
         <Image src={coffee.img} alt='' width="500" height="500"/>
       </Link>
         <h1 className={styles.title}>{coffee.title}</h1>
