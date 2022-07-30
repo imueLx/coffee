@@ -1,14 +1,10 @@
 module.exports = {
   // next.config.js
-  images:{
-    domains:["res.cloudinary.com"]
-  },
   async headers() {
     return [
       {
         // matching all API routes
         source: '/api/:path*',
-        destination: 'https://coffee-plum.vercel.app/:path*',
         headers: [
           { key: "Access-Control-Allow-Credentials", value: "true" },
           { key: "Access-Control-Allow-Origin", value: "*" },
@@ -18,6 +14,17 @@ module.exports = {
       }
     ]
     
+  },
+  async rewrites() {
+        return [
+          {
+            source: '/api/:path*',
+            destination: 'https://coffee-plum.vercel.app/:path*',
+          },
+        ]
+  },
+  images:{
+    domains:["res.cloudinary.com"]
   }
   
 }
