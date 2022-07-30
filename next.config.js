@@ -1,5 +1,9 @@
 module.exports = {
   // next.config.js
+  
+  images:{
+    domains:["res.cloudinary.com"]
+  },
   async headers() {
     return [
       {
@@ -22,9 +26,6 @@ module.exports = {
             destination: 'https://coffee-plum.vercel.app/:path*',
           },
         ]
-  },
-  images:{
-    domains:["res.cloudinary.com"]
   }
   
 }
