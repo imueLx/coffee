@@ -25,8 +25,12 @@ const quantity = useSelector(state=>state.cart.quantity)
           <Link href="/products" passHref>
             <li className={styles.listItem}>Products</li> 
           </Link>
+          <Link href="/feedbacks" passHref>
             <li className={styles.listItem}>Feedbacks</li>
+          </Link>
+          <Link href="/contact" passHref>
             <li className={styles.listItem}>Contact Us</li>
+          </Link>
           </ul>
 
       </div>
