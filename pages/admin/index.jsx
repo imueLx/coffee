@@ -12,7 +12,7 @@ const Index = ({orders, products}) => {
     const handleDelete = async (id)=>{
         try {
             const res  = await  axios.delete(
-                "http://coffee-plum.vercel.app/api/products/"+ id
+                "https://coffee-plum.vercel.app/api/products/"+ id
                 );
             setCoffeeList(coffeeList.filter((coffee)=>coffee._id !== id))
         } catch (err) {
@@ -26,7 +26,7 @@ const Index = ({orders, products}) => {
         const currentStatus = item.status
 
         try {
-            const res = await axios.put("http://coffee-plum.vercel.app/api/orders/" + id, {
+            const res = await axios.put("https://coffee-plum.vercel.app/api/orders/" + id, {
               status: currentStatus + 1,
             });
             setOrderList([
