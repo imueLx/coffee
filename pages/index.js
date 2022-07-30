@@ -15,7 +15,6 @@ export default function Home({coffeeList, admin}) {
       <Head>
         <title>Crave.Kape</title>
         <meta name="description" content="Best Brewed Coffee for less" />
-        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Featured/>
