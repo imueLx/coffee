@@ -23,7 +23,7 @@ module.exports = {
         return [
           {
             source: '/api/:path*',
-            destination: 'https://coffee-plum.vercel.app/:path*',
+            destination: 'http://coffee-plum.vercel.app/:path*',
           },
         ]
   }
