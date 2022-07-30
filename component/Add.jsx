@@ -44,7 +44,7 @@ const Add = ({ setClose }) => {
         img: url,
       };
 
-      await axios.post("http://coffee-plum.vercel.app/api/products", newProduct);
+      await axios.post("https://coffee-plum.vercel.app/api/products", newProduct);
       setClose(true);
     } catch (err) {
       console.log(err);
@@ -57,7 +57,7 @@ const Add = ({ setClose }) => {
         <span onClick={() => setClose(true)} className={styles.close}>
           X
         </span>
-        <h1>Add a new Pizza</h1>
+        <h1>Add new Coffee</h1>
         <div className={styles.item}>
           <label className={styles.label}>Choose an image</label>
           <input type="file" onChange={(e) => setFile(e.target.files[0])} />
@@ -71,7 +71,7 @@ const Add = ({ setClose }) => {
           />
         </div>
         <div className={styles.item}>
-          <label className={styles.label}>Desc</label>
+          <label className={styles.label}>Description</label>
           <textarea
             rows={4}
             type="text"
@@ -102,7 +102,7 @@ const Add = ({ setClose }) => {
           </div>
         </div>
         <div className={styles.item}>
-          <label className={styles.label}>Extra</label>
+          <label className={styles.label}>Add-ons</label>
           <div className={styles.extra}>
             <input
               className={`${styles.input} ${styles.inputSm}`}

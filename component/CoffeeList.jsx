@@ -7,7 +7,7 @@ const CoffeeList = ({coffeeList}) => {
     <div className={styles.container}>
         <h1 className={styles.title} > Best Coffee</h1>
         <p className={styles.desc}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit facere qui, aut, quae expedita vitae odio cum ea eos quis repudiandae aperiam? Accusantium soluta totam sequi consectetur mollitia inventore debitis.
+            Satisfy your Cravings, Order now.
         </p>
         <div className={styles.wrapper}>
             {coffeeList.map((coffee) =>(
