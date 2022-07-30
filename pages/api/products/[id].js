@@ -32,7 +32,7 @@ await dbConnect();
     } catch (err) {
       res.status(500).json(err);
     }
-  
+  }
 
   if (method === "DELETE") {
     if(!token || token !== process.env.token){
@@ -44,6 +44,5 @@ await dbConnect();
     } catch (err) {
       res.status(500).json(err);
     }
-  }
   }
 }
