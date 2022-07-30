@@ -31,7 +31,7 @@ const quantity = useSelector(state=>state.cart.quantity)
       <Link href="/cart" passHref>
       <div className={styles.item}>
         <div className={styles.cart}>
-          <Image src="/img/cart2.png " alt="" width="32" height="32" />
+          <Image src="/img/cart2.png" alt="" width="32" height="32" />
           <div className={styles.counter}>{quantity}</div>
         </div>
       </div>
