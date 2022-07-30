@@ -3,39 +3,36 @@ import styles from '../styles/Contact.module.css'
 export default function Contact () {
     return(
         <div className={styles.container}>
-            <div className={styles.row}>
 			<h1>Contact us</h1>
-            </div>
             <div className={styles.row}>
-                    <h4 style="text-align:center">We love to hear from you!</h4>
+                    <h4>We love to hear from you!</h4>
             </div>
-            <div className={styles.input-container}>
+            <div className={styles.wrapper}>
                     <div className="col-xs-12">
-                        <div className="styled-input wide">
+                        <div className={styles.styled}>
                             <input type="text" required />
                             <label>Name</label> 
                         </div>
                     </div>
-                    <div className="col-md-6 col-sm-12">
-                        <div className="styled-input">
+                    <div className={styles.input}>
+                        <div className={styles.styled}>
                             <input type="text" required />
                             <label>Email</label> 
                         </div>
                     </div>
-                    <div className="col-md-6 col-sm-12">
-                        <div className="styled-input" style="float:right;">
+                    <div className={styles.input}>
+                        <div className={styles.styled}>
                             <input type="text" required />
                             <label>Phone Number</label> 
                         </div>
                     </div>
                     <div className="col-xs-12">
-                        <div className="styled-input wide">
-                            <textarea required></textarea>
-                            <label>Message</label>
+                        <div className={styles.styled}>
+                            <textarea className={styles.textarea}>Message</textarea>
                         </div>
                     </div>
-                    <div className="col-xs-12">
-                        <div className="btn-lrg submit-btn">Send Message</div>
+                    <div className={styles.submit-btn}>
+                        Send Message
                     </div>
             </div>
         </div>
