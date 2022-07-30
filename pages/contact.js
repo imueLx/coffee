@@ -7,7 +7,7 @@ export default function Contact () {
 			<h1>Contact us</h1>
             </div>
             <div className={styles.row}>
-                    <h4 style="text-align:center">We'd love to hear from you!</h4>
+                    <h4 style="text-align:center">We love to hear from you!</h4>
             </div>
             <div className={styles.input-container}>
                     <div className="col-xs-12">
