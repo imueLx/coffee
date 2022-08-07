@@ -1,3 +1,30 @@
+.nav{
+    display: flex;
+    padding: 16px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #343A40;
+    color: #fff;
+  }
+  .logo{
+    margin: 0;
+    font-size: 45px;
+    font-family: 'Libre Bodoni', serif;
+    color: rgb(167,114,70);
+  }
+  .nav__menuBar{
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+    cursor: pointer;
+  }
+  .nav__menuBar div{
+    width: 40px;
+    height: 4px;
+    background-color: lightgray;
+    border-radius: 2px;
+  }
+
 .item{
     flex: 1;
     display: flex;
