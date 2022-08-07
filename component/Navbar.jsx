@@ -1,6 +1,7 @@
 import Image from "next/image"
 import styles from "../styles/Navbar.module.css"
 import { useSelector } from "react-redux"
+import React, { useState } from 'react'
 import Link from "next/link"
 
 const MENU_LIST = [
@@ -11,6 +12,7 @@ const MENU_LIST = [
 ];
 
 const Navbar = () => {
+
 const [navActive, setNavActive] = useState (null);
 const [activeIdx, setActiveIdx] = useState(-1)
 
