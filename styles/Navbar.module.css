@@ -25,16 +25,6 @@
     border-radius: 2px;
   }
 
-.item{
-    flex: 1;
-    display: flex;
-    align-items: center;
-}
-
-.item:nth-child(2){
-    flex: 3;
-}
-
 .item:last-child{
     justify-content: end;
 }
@@ -72,6 +62,8 @@
   @media only screen and (max-width: 600px) {
     .logo{
      font-size: 37px;
+     padding: 9px;
+     margin: 3px;
     }
    }
  
