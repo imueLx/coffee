@@ -3,46 +3,61 @@ import styles from "../styles/Navbar.module.css"
 import { useSelector } from "react-redux"
 import Link from "next/link"
 
+const MENU_LIST = [
+  { text: "Home", href: "/" },
+  { text: "Products", href: "/products" },
+  { text: "Feedbacks", href: "/feedbacks" },
+  { text: "Contact Us", href: "/contact" },
+];
 
 const Navbar = () => {
+const [navActive, setNavActive] = useState (null);
+const [activeIdx, setActiveIdx] = useState(-1)
+
 const quantity = useSelector(state=>state.cart.quantity)
+
+
   return (
-    <div className={styles.container}>
-      <div className={styles.item}>
-      <div className={styles.craveButton}>
-          <Image src="/img/cravekaps.png" alt="" width="50" height="50"/>
-    </div>
-      <div className={styles.texts}>
-        <div className={styles.logotext}>Crave.Kape</div>
-      </div>
-    </div>
-    
-      <div className={styles.item}>
-          <ul className={styles.list}>
-          <Link href="/" passHref>
-            <li className={styles.listItem}>Home</li>
-          </Link>
-          <Link href="/products" passHref>
-            <li className={styles.listItem}>Products</li> 
-          </Link>
-          <Link href="/feedbacks" passHref>
-            <li className={styles.listItem}>Feedbacks</li>
-          </Link>
-          <Link href="/contact" passHref>
-            <li className={styles.listItem}>Contact Us</li>
-          </Link>
-          </ul>
+    <header>
+      <nav className={styles.nav}>
+      <div
+        onClick={() => setNavActive(!navActive)}
+        className={styles.nav__menuBar}
+      >
+        <div></div>
+        <div></div>
+        <div></div>
 
       </div>
-      <Link href="/cart" passHref>
-      <div className={styles.item}>
-        <div className={styles.cart}>
-          <Image src="/img/cart2.png" alt="" width="32" height="32" />
-          <div className={styles.counter}>{quantity}</div>
-        </div>
-      </div>
+      <Link href={"/"}>
+        <a>
+          <h1 className={styles.logo}>Crave.Kape</h1>
+        </a>
       </Link>
-    </div>
+      <div className={`${navActive ? "active" : ""} nav__menu-list`}>
+        {MENU_LIST.map((menu, idx) => (
+          <div
+            onClick={() => {
+              setActiveIdx(idx);
+              setNavActive(false);
+            }}
+            key={menu.text}
+          >
+            <NavItem active={activeIdx === idx} {...menu} />
+          </div>
+        ))}
+      </div>
+
+        <Link href="/cart" passHref>
+          <div className={styles.item}>
+            <div className={styles.cart}>
+              <Image src="/img/cart2.png" alt="" width="32" height="32" />
+              <div className={styles.counter}>{quantity}</div>
+            </div>
+          </div>
+        </Link>
+      </nav>  
+    </header>
   )
 }
 

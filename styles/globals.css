@@ -14,3 +14,59 @@ a {
 * {
   box-sizing: border-box;
 }
+
+header{
+  position: sticky;
+  z-index: 30;
+  top: 0;
+}
+
+.nav__menu-list{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 60px;
+  width: 288px;
+  row-gap: 24px;
+  left: -288px;
+  padding: 24px 16px;
+  transition: all 0.2s;
+  min-height: calc(100vh - 60px);
+  background-color: #343A40;
+}
+.nav__menu-list.active{
+  left: 0;
+}
+.nav__link{
+  font-size: 18px; 
+  position: relative;
+  transition: all 0.2s;
+}
+
+@media screen and (min-width: 768px) {
+  .nav__menu-bar{
+    display: none;
+  }
+  .nav__menu-list{
+    position: unset;
+    flex-direction: row;
+    min-height: fit-content;
+    width: fit-content;
+    column-gap: 24px;
+    align-items: center;
+  }
+  .nav__link::before{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    bottom: -11px;
+    left: 0;
+    background-color: rgb(167,114,70);
+    transition: all 0.3s;
+  }
+  
+  .nav__link:hover:before{
+   width: 100%;
+  }
+}
