@@ -3,6 +3,7 @@ import styles from "../styles/Navbar.module.css"
 import { useSelector } from "react-redux"
 import React, { useState } from 'react'
 import Link from "next/link"
+import NavItem from './NavItem'
 
 const MENU_LIST = [
   { text: "Home", href: "/" },
